@@ -1,0 +1,766 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans Odia", sans-serif;
+    background: #fffaf3;
+    color: #3b2020;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =================================
+   NAVBAR
+================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(40, 12, 12, 0.92);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-container {
+    width: min(1200px, 92%);
+    margin: auto;
+
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+}
+
+.logo-icon {
+    font-size: 30px;
+}
+
+.logo strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+}
+
+.logo small {
+    display: block;
+    color: #e9c46a;
+    font-size: 11px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-menu a {
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #e9c46a;
+}
+
+.language-btn {
+    border: 1px solid #e9c46a;
+    background: transparent;
+    color: #e9c46a;
+
+    padding: 7px 14px;
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+
+    background: none;
+    border: none;
+    color: white;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(48, 13, 13, 0.58),
+            rgba(48, 13, 13, 0.78)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(900px, 92%);
+
+    color: white;
+
+    animation: heroAppear 1.2s ease;
+}
+
+.welcome-badge {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 30px;
+
+    margin-bottom: 20px;
+
+    font-size: 13px;
+}
+
+.odia-small {
+    color: #f5d98a;
+    font-size: 18px;
+}
+
+.hero h1 {
+    margin: 15px 0;
+}
+
+.odia-title {
+    display: block;
+
+    font-size: clamp(40px, 9vw, 80px);
+
+    font-weight: 700;
+}
+
+.english-title {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(25px, 5vw, 50px);
+
+    color: #f5d98a;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: auto;
+
+    color: rgba(255,255,255,0.85);
+
+    font-size: 16px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #d94841;
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(217,72,65,0.3);
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #4a1717;
+}
+
+
+/* =================================
+   FLOWERS
+================================= */
+
+.flower {
+    position: absolute;
+
+    font-size: 35px;
+
+    opacity: 0.7;
+
+    animation: floatFlower 5s infinite ease-in-out;
+}
+
+.flower-one {
+    top: 20%;
+    left: 8%;
+}
+
+.flower-two {
+    top: 30%;
+    right: 10%;
+}
+
+.flower-three {
+    bottom: 20%;
+    left: 12%;
+}
+
+.flower-four {
+    bottom: 15%;
+    right: 12%;
+}
+
+
+/* =================================
+   SECTIONS
+================================= */
+
+section {
+    padding: 90px 5%;
+}
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+}
+
+.section-label {
+    color: #b43a35;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(30px, 5vw, 45px);
+
+    margin: 8px 0;
+
+    color: #4a1717;
+}
+
+.section-heading p {
+    color: #765f5f;
+}
+
+
+/* =================================
+   COUNTDOWN
+================================= */
+
+.countdown-section {
+    background: #fff4df;
+}
+
+.countdown-container {
+    max-width: 850px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.count-box {
+    background: white;
+
+    padding: 25px 10px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(90,40,20,0.08);
+}
+
+.count-box strong {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 40px;
+
+    color: #b43a35;
+}
+
+.count-box span {
+    font-size: 13px;
+
+    color: #765f5f;
+}
+
+
+/* =================================
+   ABOUT
+================================= */
+
+.about-section {
+    background: white;
+}
+
+.about-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.image-frame {
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        20px 20px 0 #f1d58b;
+}
+
+.about-content h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    color: #4a1717;
+
+    margin: 10px 0 20px;
+}
+
+.about-content h2 span {
+    color: #b43a35;
+}
+
+.about-content p {
+    color: #6c5757;
+
+    margin-bottom: 15px;
+}
+
+.text-button {
+    color: #b43a35;
+
+    font-weight: 700;
+}
+
+
+/* =================================
+   FEATURES
+================================= */
+
+.features-section {
+    background: #fffaf3;
+}
+
+.feature-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(70,30,20,0.07);
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: #4a1717;
+
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    color: #765f5f;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   GALLERY
+================================= */
+
+.gallery-section {
+    background: #4a1717;
+
+    color: white;
+
+    text-align: center;
+}
+
+.gallery-section .section-label {
+    color: #f5d98a;
+}
+
+.gallery-section h2 {
+    color: white;
+}
+
+.gallery-section p {
+    color: #e5cccc;
+}
+
+.gallery-grid {
+    max-width: 1100px;
+
+    margin: auto auto 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+.gallery-grid img {
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    transition: 0.4s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =================================
+   COMMITTEE
+================================= */
+
+.committee-preview {
+    background: #fffaf3;
+
+    text-align: center;
+}
+
+.committee-cards {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.member-card {
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(70,30,20,0.08);
+}
+
+.member-photo {
+    width: 90px;
+    height: 90px;
+
+    margin: auto auto 15px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #f8e2bc;
+
+    font-size: 40px;
+}
+
+.member-card h3 {
+    color: #4a1717;
+}
+
+.member-card p {
+    color: #765f5f;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   LOCATION
+================================= */
+
+.location-section {
+    background: #fff4df;
+}
+
+.location-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.location-container h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    color: #4a1717;
+
+    margin: 10px 0;
+}
+
+.location-container p {
+    color: #765f5f;
+
+    margin-bottom: 25px;
+}
+
+.map-placeholder {
+    min-height: 300px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            rgba(74,23,23,0.7),
+            rgba(74,23,23,0.7)
+        ),
+        url("../images/dola.jpg");
+
+    background-size: cover;
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.map-placeholder span {
+    font-size: 50px;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+    background: #281010;
+
+    color: white;
+
+    padding: 50px 5% 20px;
+}
+
+.footer-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.footer-brand h2 {
+    font-family: "Playfair Display", serif;
+}
+
+.footer-brand p {
+    color: #d9baba;
+}
+
+.footer-links {
+    margin: 30px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.footer-links a:hover {
+    color: #f5d98a;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    padding-top: 20px;
+
+    color: #bfa4a4;
+
+    font-size: 12px;
+}
+
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes heroAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes floatFlower {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(15deg);
+    }
+
+}

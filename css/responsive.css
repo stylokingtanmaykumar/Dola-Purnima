@@ -1,0 +1,133 @@
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+
+        position: absolute;
+
+        top: 72px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+        background: #351313;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        text-align: center;
+
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+
+    .countdown-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .about-container,
+    .location-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .feature-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .committee-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 65px 5%;
+    }
+
+
+    .logo strong {
+        font-size: 16px;
+    }
+
+
+    .hero {
+        min-height: 95vh;
+    }
+
+
+    .odia-title {
+        font-size: 38px;
+    }
+
+
+    .english-title {
+        font-size: 28px;
+    }
+
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+
+    .countdown-container {
+        gap: 10px;
+    }
+
+
+    .count-box {
+        padding: 18px 5px;
+    }
+
+
+    .count-box strong {
+        font-size: 30px;
+    }
+
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .gallery-grid img {
+        height: 150px;
+    }
+
+
+    .about-content h2,
+    .location-container h2 {
+        font-size: 34px;
+    }
+
+}
